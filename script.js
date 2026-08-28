@@ -1,14 +1,13 @@
 // 1. Configuración y Datos Iniciales
 const WHATSAPP_NUMBER = "50431531884"; // Número de WhatsApp sin '+' ni espacios
 
-const products = [
-  { id: 1, name: "Mango Enchilado Clásico", price: 65.00, img: "https://via.placeholder.com/300x200?text=Mango+Enchilado" },
-  { id: 2, name: "Manzana Loca con Chile", price: 50.00, img: "https://via.placeholder.com/300x200?text=Manzana+Enchilada" },
-  { id: 3, name: "Gominolas con Tajín", price: 40.00, img: "https://via.placeholder.com/300x200?text=Gominolas" },
-  { id: 4, name: "Chips de Plátano con Chile", price: 35.00, img: "https://via.placeholder.com/300x200?text=Chips+Platano" },
-  { id: 5, name: "Combo Dulce y Picadita", price: 120.00, img: "https://via.placeholder.com/300x200?text=Combo+Especial" }
+const productos = [
+  { id: 1, name: "Mango Enchilado Clásico", price: 40.00, img: "IMAGENES/1.png" },
+  { id: 2, name: "Uvas Preparadas", price: 40.00, img: "IMAGENES/4.png" },
+  { id: 3, name: "Gomitas Preparadas", price: 45.00, img: "IMAGENES/2.png" },
+  { id: 4, name: "Wantan Al Vapor (6 UND)", price: 60.00, img: "IMAGENES/6.png" },
+  { id: 5, name: "Combo Dulce y Picadita", price: 100.00, img: "IMAGENES/5.png" }
 ];
-
 // Carga el carrito guardado en localStorage o inicia vacío
 let cart = JSON.parse(localStorage.getItem("dyp_cart")) || [];
 
