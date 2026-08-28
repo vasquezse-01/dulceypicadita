@@ -8,11 +8,12 @@ const productos = [
   { id: 4, name: "Wantan Al Vapor (6 UND)", price: 60.00, img: "IMAGENES/6.png" },
   { id: 5, name: "Combo Dulce y Picadita", price: 100.00, img: "IMAGENES/5.png" }
 ];
+
 // Carga el carrito guardado en localStorage o inicia vacío
 let cart = JSON.parse(localStorage.getItem("dyp_cart")) || [];
 
 // 2. Renderizado del Catálogo
-function renderCatalog(itemsToRender = products) {
+function renderCatalog(itemsToRender = productos) {
   const catalog = document.getElementById("catalog");
   if (!catalog) return;
 
@@ -37,7 +38,7 @@ function renderCatalog(itemsToRender = products) {
 
 // 3. Gestión del Carrito
 function addToCart(id) {
-  const product = products.find(p => p.id === id);
+  const product = productos.find(p => p.id === id);
   if (!product) return;
 
   const existingItem = cart.find(item => item.id === id);
@@ -167,7 +168,7 @@ function handleCheckout(e) {
   cart = [];
   saveCart();
   closeModal("cart-modal");
-  
+
   // Limpiar formulario
   const form = document.getElementById("checkout-form");
   if (form) form.reset();
@@ -180,7 +181,7 @@ function showToast(msg) {
 
   toast.textContent = msg;
   toast.classList.remove("hidden");
-  
+
   setTimeout(() => {
     toast.classList.add("hidden");
   }, 2500);
@@ -196,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (searchInput) {
     searchInput.addEventListener("input", (e) => {
       const query = e.target.value.toLowerCase().trim();
-      const filtered = products.filter(p => p.name.toLowerCase().includes(query));
+      const filtered = productos.filter(p => p.name.toLowerCase().includes(query));
       renderCatalog(filtered);
     });
   }
