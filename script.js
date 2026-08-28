@@ -6,7 +6,7 @@ const productos = [
   { id: 2, name: "Uvas Preparadas", price: 40.00, img: "IMAGENES/4.png" },
   { id: 3, name: "Gomitas Preparadas", price: 45.00, img: "IMAGENES/2.png" },
   { id: 4, name: "Wantan Al Vapor (6 UND)", price: 60.00, img: "IMAGENES/6.png" },
-  { id: 5, name: "Combo Dulce y Picadita", price: 100.00, img: "IMAGENES/5.png" }
+  // { id: 5, name: "Combo Dulce y Picadita", price: 100.00, img: "IMAGENES/5.png" }
 ];
 
 // Carga el carrito guardado en localStorage o inicia vacío
